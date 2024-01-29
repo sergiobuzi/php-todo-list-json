@@ -26,5 +26,17 @@
         ],
     ];
 
+    // Gestisco la creazione di un nuovo todo
+    $newTodoText = $_POST['text'];
+    $newTodo = [
+        "text" => $newTodoText,
+        "completed" => false
+    ];
+    
+    // Aggiungo il nuovo todo all'array
+    $todos[] = $newTodo;
+   
+    
     $jsonTodo = json_encode($todos);
     echo $jsonTodo;
+    ?>
